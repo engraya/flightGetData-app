@@ -1,0 +1,4 @@
+/projectenv
+db.sqlite3
+static/scss
+static/vendor

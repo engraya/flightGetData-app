@@ -1,0 +1,13 @@
+{% extends 'baseapp/base.html' %}
+
+
+{% block content %}
+    
+<div class="row justify-content-center my-5">
+  <div id="context"  class="col-md-5">
+      <h1>Page Not Found</h1>
+      <p>Make sure you are connected to the internet or you are entering a valid city name</p>
+      <a href="{% url 'homePage' %}" class="btn btn-secondary">Go Home</a>
+  </div>
+</div>
+{% endblock content %}
