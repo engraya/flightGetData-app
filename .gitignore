@@ -1,0 +1,8 @@
+/projectenv
+db.sqlite3
+static/scss
+static/vendor
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore

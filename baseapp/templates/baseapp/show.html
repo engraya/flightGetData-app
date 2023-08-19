@@ -1,0 +1,47 @@
+{% extends 'baseapp/base.html' %}
+
+
+{% block content %}
+    
+<div id="main1" class="row justify-content-center my-5">
+    <div id="result"  class="col-md-5">
+        <div id="sub" class="mt-4 p-5 bg text-white rounded mb-3">
+            <h2 id="text">All Flight Updates</h2>
+        </div>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="input-group">
+            <div class="input-group-append">
+              <button id="btn" class="btn btn-success" type="submit">
+                Show
+              </button>
+            </div>
+          </div>
+        </form>
+        <hr>
+        {% for data in datas %}
+        <div class="card p-2 my-2">
+            <div class="card-body">
+                <div class="card-text" style="color: dark">Flight Date: <h6>{{ data.flight_date }}</h6></div>
+                <div class="card-text">Flight Status: <h6>{{ data.flight_status}}</h6></div>
+                <strong class="card-text">Flight Departure: <h6></h6></strong>
+                <div class="card-text">Airport: <h6>{{ data.departure.airport }}</h6></div>
+                <div class="card-text">Timezone: <h6>{{ data.departure.timezone }}</h6></div>
+                <div class="card-text">Scheduled: <h6>{{ data.departure.scheduled }}</h6></div>
+                <div class="card-text">Estimated: <h6>{{ data.departure.estimated }}</h6></div>
+                <hr>
+   
+                <strong class="card-text">Flight Arrival: <h6></h6></strong>
+  
+                <div class="card-text">Airport: <h6>{{ data.departure.airport }}</h6></div>
+                <div class="card-text">Timezone: <h6>{{ data.departure.timezone }}</h6></div>
+                <div class="card-text">Scheduled: <h6>{{ data.departure.scheduled }}</h6></div>
+                <div class="card-text">Estimated: <h6>{{ data.departure.estimated }}</h6></div>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+    

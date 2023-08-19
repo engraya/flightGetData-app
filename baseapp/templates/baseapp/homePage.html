@@ -1,0 +1,49 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+{% block content %}
+    
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url({% static 'img/slide/slide-1.jpg' %})">
+          <div class="container">
+            <h2>Explore <span>Flight API</span></h2>
+            <p>This application uses highly recognisable weather API products that make working with the flight data a way easier. it constitutes the aweosme work of  millions of developers around a clock and believe that these benefits might be suitable for most of applications and users around the world.</p>
+            <a href="" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Components Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+      </div>
+    </section><!-- End Components  Section -->
+
+  </main><!-- End #main -->
+
+{% endblock content %}

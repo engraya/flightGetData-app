@@ -1,0 +1,43 @@
+{% extends 'baseapp/base.html' %}
+
+
+{% block content %}
+    
+<div id="main1" class="row justify-content-center my-5">
+    <div id="result"  class="col-md-5">
+        <div id="sub" class="mt-4 p-5 bg text-white rounded mb-3">
+            <h2 id="text">Airline Updates</h2>
+        </div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="input-group">
+              <input type="text" class="form-control" name="airline" placeholder="Enter Airline.......">
+              <div class="input-group-append">
+                <button id="btn" class="btn btn-success" type="submit">
+                  Show
+                </button>
+              </div>
+            </div>
+          </form>
+        <hr>
+        {% for data in datas %}
+        <div class="card p-2 my-2">
+            <div class="card-body">
+                <div class="card-text text-black">Airline Name: <span>{{ data.airline_name}}</span></div>
+                <div class="card-text text-black">Country Name: <span>{{ data.country_name}}</span></div>
+                <div class="card-text text-black">Country_iso2: <span>{{ data.country_iso2 }}</span></div>
+                <div class="card-text text-black">Icao_date: <span>{{ data.icao_code }}</span></div>
+                <div class="card-text text-black">Call Sign: <span>{{ data.callsign }}</span></div>
+                <div class="card-text text-black">Iata Data: <span>{{ data.iata_code }}</h6></div>
+                <div class="card-text text-black">Status: <span>{{ data.status }}</span></div>
+                <div class="card-text text-black">Date Founded: <span>{{ data.date_founded }}</span></div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock content %}
+    
+
